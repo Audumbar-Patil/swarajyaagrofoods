@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Swarajya/static/css/main.b9661154.css",
+    "main.js": "/Swarajya/static/js/main.86f8912d.js",
+    "index.html": "/Swarajya/index.html",
+    "main.b9661154.css.map": "/Swarajya/static/css/main.b9661154.css.map",
+    "main.86f8912d.js.map": "/Swarajya/static/js/main.86f8912d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9661154.css",
+    "static/js/main.86f8912d.js"
+  ]
+}
