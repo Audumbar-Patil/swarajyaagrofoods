@@ -1,0 +1,160 @@
+.spices-showcase {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 100px 0;
+}
+
+.spices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.spice-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.spice-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.spice-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spice-emoji {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.spice-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.spice-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 25px;
+  min-height: 80px;
+}
+
+.spice-benefits {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.spice-benefits h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.spice-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.spice-benefits li {
+  padding: 5px 0;
+  color: #666;
+  position: relative;
+  padding-left: 20px;
+}
+
+.spice-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.spice-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(102, 126, 234, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.spice-card:hover .spice-overlay {
+  opacity: 1;
+}
+
+.spice-overlay .btn {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.spice-card:hover .spice-overlay .btn {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .spices-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .spice-card {
+    padding: 30px 20px;
+  }
+  
+  .spice-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .spice-emoji {
+    font-size: 2rem;
+  }
+  
+  .spice-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spices-showcase {
+    padding: 60px 0;
+  }
+  
+  .spice-card {
+    padding: 25px 15px;
+  }
+  
+  .spice-description {
+    min-height: auto;
+  }
+}
